@@ -30,6 +30,7 @@ int Stats::countWords(std::string theFileName)
 {
     int count = 0;
     std::string word;
+    std::string wholeBook;
 
     std::ifstream inFile;
 
@@ -51,12 +52,30 @@ int Stats::countWords(std::string theFileName)
     return count;
 }
 
-void Stats::countLetters(std::string theWord)
+void Stats::countLetters(std::string theFileName)
 {
-    for (char c : theWord)
+    char ch;
+    int char_count = 0;
+    std::string word;
+    std::string wholeBook;
+
+    std::ifstream inFile;
+
+    inFile.open(theFileName);
+
+    if (!inFile)
     {
-        charFreq[c]++;
+        std::cerr << "Unable to open file " + theFileName;
+        exit(1);
     }
+
+    while (inFile.get(ch))
+    {
+        char lower = std::tolower(static_cast<unsigned char>(ch));
+        charFreq[lower]++;
+    }
+
+    inFile.close();
 }
 
 std::unordered_map<char, int> Stats::getCharFreq()

@@ -4,8 +4,10 @@
 #include <string>
 #include <stdio.h>
 #include <vector>
+#include <cctype>
 #include <fstream>
 #include <iostream>
+#include <algorithm>
 #include <unordered_map>
 
 class Stats
