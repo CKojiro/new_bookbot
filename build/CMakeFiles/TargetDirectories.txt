@@ -1,0 +1,3 @@
+/home/ckoji/githome/new_bookbot/build/CMakeFiles/new_bookbot.dir
+/home/ckoji/githome/new_bookbot/build/CMakeFiles/edit_cache.dir
+/home/ckoji/githome/new_bookbot/build/CMakeFiles/rebuild_cache.dir
